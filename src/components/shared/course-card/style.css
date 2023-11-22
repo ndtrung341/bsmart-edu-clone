@@ -1,0 +1,128 @@
+.course-card__banner {
+  height: 200px;
+  position: relative;
+}
+
+.course-card__banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-mentor__avatar {
+  position: absolute;
+  bottom: 0;
+  left: 0rem;
+  margin-left: 16px;
+  margin-bottom: -21px;
+}
+
+.course-card .ant-card-body {
+  position: relative;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+}
+
+.ant-card .ant-card-meta-title {
+  white-space: unset;
+}
+
+.course-card__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #130f40 !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  margin: 1rem 0 !important;
+  line-height: 1.2 !important;
+}
+
+.course-card__title:hover {
+  color: var(--primary-color);
+}
+
+.course-card__mentor span {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 5px;
+}
+
+.course-card__mentor span:first-child {
+  color: #999 !important;
+}
+
+.course-card__mentor span:last-child {
+  color: var(--primary-color);
+}
+
+.course-card__description {
+  margin-top: 10px;
+  margin-bottom: 10px !important;
+  font-weight: 400 !important;
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 25px !important;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-size: 15px !important;
+}
+
+.course-card__rating > li {
+  margin-inline-end: 5px !important;
+}
+
+.course-card__price {
+  font-weight: bold;
+  color: firebrick;
+  font-size: 18px;
+}
+
+.ant-rate {
+  color: var(--primary-color) !important;
+}
+
+.course-card__btn {
+  width: 100%;
+  color: var(--text-light) !important;
+}
+
+.ant-card-actions {
+  padding: 0 16px !important;
+}
+
+.course-card__type img {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  object-fit: cover;
+}
+
+/* test */
+.course-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card .ant-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.course-card .course-card__mentor {
+  margin-top: auto;
+}
+
+.course-card .course-card__title {
+  margin-bottom: 8px !important;
+}

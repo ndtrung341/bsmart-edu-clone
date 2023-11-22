@@ -1,0 +1,21 @@
+.aboutus {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url('/background.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.about-description {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 30px;
+  margin-bottom: 1rem;
+}
+
+.aboutus-banner__img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000;
+}

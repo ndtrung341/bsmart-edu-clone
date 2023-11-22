@@ -1,0 +1,93 @@
+.header-bottom {
+  background-color: var(--text-light);
+  padding: 20px 0;
+  /* position: sticky; */
+  top: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item__link {
+  display: inline-block;
+  padding: 10px 7px;
+  color: #130f40;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.nav-item__link.nav-item__link--active,
+.nav-item__link:hover {
+  color: var(--primary-color);
+}
+
+.header-cart a {
+  position: relative;
+}
+
+.header-cart img {
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
+}
+
+.cart-total {
+  font-size: 0.8rem;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-weight: 500;
+  right: -4px;
+  top: -24px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 6px;
+  background-color: white;
+  box-shadow: 0 0 30px rgb(0 0 0 / 10%);
+  border-radius: 5px;
+  border-top: 2px solid var(--primary-color);
+  width: max-content;
+  min-width: 10rem;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.sub-menu::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
+.nav-item:hover .sub-menu {
+  visibility: visible;
+  opacity: 100%;
+}
+
+.sub-menu .nav-item {
+  padding: 4px 10px;
+}
+
+.sub-menu .nav-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+@media only screen and (max-width: 992px) {
+  .header-bottom {
+    display: none;
+  }
+}
