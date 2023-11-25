@@ -1,0 +1,12 @@
+section {
+  padding: 40px 0;
+}
+
+section .section-heading {
+  font-size: 45px !important;
+  line-height: 55px;
+  font-weight: 700;
+  color: #0e0a38;
+  margin-bottom: 30px !important;
+  text-align: center;
+}

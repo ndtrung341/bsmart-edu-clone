@@ -1,0 +1,22 @@
+.advantage .advantage-icon {
+  font-size: 1.8rem;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+.advantage .advatange-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0;
+}
+
+.advantage .advatange-description {
+  line-height: 30px;
+  font-size: 20px;
+  text-align: justify;
+  padding: 10px 0;
+  font-weight: 500;
+}

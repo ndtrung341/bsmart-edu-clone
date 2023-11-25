@@ -1,0 +1,27 @@
+.advantages2 {
+  padding: 65px 0 65px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/funfact_bg.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.advantages2 .advantages2-content h4 {
+  font-size: 24px !important;
+  line-height: 30px !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  margin-bottom: 20px !important;
+}
+
+.advantages2 .advantages2-content h2 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 30px;
+  margin-top: 0;
+}

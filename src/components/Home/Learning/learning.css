@@ -1,0 +1,88 @@
+.learning-path {
+  padding: 0 !important;
+}
+
+.left,
+.right {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 220px 0;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 6px #000;
+}
+
+.left {
+  background-image: url('/banner-3.webp');
+}
+
+.right {
+  background-image: url('/banner-4.webp');
+}
+
+.right::before,
+.left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.right:hover::before,
+.left:hover::before {
+  background-color: transparent;
+  transition: all 0.15s linear;
+}
+
+.content h2 {
+  color: var(--text-light) !important;
+  font-size: 42px !important;
+  line-height: 56px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.content span {
+  color: var(--text-light) !important;
+  font-size: 22px !important ;
+  line-height: 26px !important;
+}
+
+.container-fluid {
+  padding: 0 1rem;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: -120px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .right {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .left {
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 6px #000;
+  }
+
+  .learning-path .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
