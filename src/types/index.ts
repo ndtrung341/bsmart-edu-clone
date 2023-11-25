@@ -20,5 +20,4 @@ export type Course = {
    students: number,
    price: number,
    rating: number
-   type: 'online' | 'offline'
 }
