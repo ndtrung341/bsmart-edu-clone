@@ -19,7 +19,7 @@ export default function Home() {
       <AboutUs />
       <Advantages />
       <Learning />
-      <CourseSwiper className={'best-course'} data={bestCourses} />
+      <CourseSwiper className={'best-course'} data={courses} />
       <MentorSwiper className={'mentor'} data={mentors} />
       <LogoSwiper />
       <Advantages2 />
