@@ -13,12 +13,12 @@ async function main() {
 
    for (const c of courses) {
       const mentorIndex = mentors.findIndex(m => m.name.includes(c.mentor.name));
-      const catSlug = slugify(c.category, { lower: true });
-      const courseSlug = slugify(c.title, { lower: true });
+      const catSlug = slugify(c.category, { lower: true, remove: /[*+~.()'"!:@]/g });
+      const courseSlug = slugify(c.title, { lower: true, remove: /[*+~.()'"!:@]/g });
       const course = await prisma.course.create({
          data: {
             title: c.title,
-            slug: courseSlug,
+            slug: "/course/" + courseSlug,
             thumbnail: c.thumbnail,
             description: c.description,
             price: c.price,
@@ -27,10 +27,10 @@ async function main() {
             category: {
                connectOrCreate: {
                   where: {
-                     slug: catSlug
+                     slug: "/category/" + catSlug
                   }, create: {
                      title: c.category,
-                     slug: catSlug
+                     slug: "/category/" + catSlug
                   }
                }
             },

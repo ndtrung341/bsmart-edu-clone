@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import { Button, Layout } from 'antd';
 import { Header } from '@/src/components/Header';
-import './styles/index.css';
+import '../styles/index.css';
 import StyledComponentsRegistry from '../lib/AntdRegistry';
 import Footer from '../components/Footer';
 

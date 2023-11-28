@@ -1,0 +1,19 @@
+.banner2 {
+  width: 100%;
+  padding: 110px 0 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(5, 1, 51, 0.7), rgba(5, 1, 51, 0.7)), url('/banner-2.webp');
+}
+
+.banner2__wrapper .banner2__title {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ff630e;
+}
+
+.banner2__wrapper .banner2__content {
+  color: #fff;
+}

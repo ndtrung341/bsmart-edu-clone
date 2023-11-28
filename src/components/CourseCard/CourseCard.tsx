@@ -3,10 +3,9 @@ import './style.css';
 import { FaRegCalendarAlt, FaUser } from 'react-icons/fa';
 import { Avatar, Card, Typography, Flex, Rate, Button } from 'antd';
 import Link from 'next/link';
-import { Course, Mentor } from '@/src/types';
 import Image from 'next/image';
 import CourseLevel from './CourseLevel';
-
+import { Course, Mentor } from '@prisma/client';
 interface CourseCardCoverProps {
   link: string;
   banner?: string;
@@ -30,12 +29,13 @@ const CourseCardCover: React.FC<CourseCardCoverProps> = ({
   );
 };
 
-export type CourseCardData = Partial<Omit<Course, 'type' | 'category'>> & {
-  mentor: Partial<Omit<Mentor, 'email' | 'bio'>>;
+export type CourseCardData = Omit<Course, 'category'> & {
+  mentor: Omit<Mentor, 'email' | 'bio'>;
 };
 
 const CourseCard: React.FC<{ data: CourseCardData }> = (props) => {
   const { data } = props;
+
   return (
     <Card
       className="course-card"
@@ -43,20 +43,20 @@ const CourseCard: React.FC<{ data: CourseCardData }> = (props) => {
       bodyStyle={{ border: '1px solid #c1c1c1' }}
       cover={
         <CourseCardCover
-          banner={data.banner}
-          link="#"
-          mentorAvatar={undefined && data.mentor.avatarUrl}
+          banner={data.thumbnail ?? undefined}
+          link={data.slug}
+          mentorAvatar={data.mentor.image ?? undefined}
         />
       }
       actions={[
-        <Link key={'#'} href={'#'}>
+        <Link key={'#'} href={data.slug}>
           <Button className="btn course-card__btn">Xem chi tiết</Button>
         </Link>,
       ]}
     >
       <Card.Meta
         title={
-          <Link href={'#'}>
+          <Link href={data.slug}>
             <Typography.Title level={4} className="course-card__title">
               {data.title}
             </Typography.Title>
@@ -64,7 +64,7 @@ const CourseCard: React.FC<{ data: CourseCardData }> = (props) => {
         }
       />
 
-      <Link href="#" className="course-card__mentor">
+      <Link href={data.slug} className="course-card__mentor">
         <Flex>
           <Typography.Text>Mentor &nbsp;</Typography.Text>
           <Typography.Text>{data.mentor.name}</Typography.Text>
@@ -99,7 +99,7 @@ const CourseCard: React.FC<{ data: CourseCardData }> = (props) => {
       </Flex>
 
       <div className="course-card__type">
-        <CourseLevel level={data.level} />
+        <CourseLevel level={data.courseLevel} />
       </div>
     </Card>
   );

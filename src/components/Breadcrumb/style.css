@@ -1,0 +1,14 @@
+.breadcrumb__link {
+  color: inherit;
+}
+
+.breadcrumb__text {
+  font-size: 1rem !important;
+  color: inherit !important;
+  font-weight: 500 !important;
+}
+
+.breadcrumb__link:has(> .breadcrumb__text):hover {
+  color: var(--primary-color) !important;
+  cursor: pointer;
+}

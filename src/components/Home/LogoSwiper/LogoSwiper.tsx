@@ -14,7 +14,7 @@ const LogoSwiper: React.FC = () => {
           .fill(0)
           .map((_, index) => `/logo-dai-hoc-0${index + 1}.webp`)}
         slideEl={({ data }) => (
-          <div className="logo-side__img" style={{}}>
+          <div className="logo-side__img" style={{ position: 'relative' }}>
             <Image fill src={data} alt=""></Image>
           </div>
         )}

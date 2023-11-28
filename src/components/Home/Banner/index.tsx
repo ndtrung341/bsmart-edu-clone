@@ -6,6 +6,7 @@ import Link from 'next/link';
 import './banner.css';
 
 const Banner: React.FC = () => {
+  console.log('render banner');
   return (
     <section className="banner">
       <Typography className="banner-content">

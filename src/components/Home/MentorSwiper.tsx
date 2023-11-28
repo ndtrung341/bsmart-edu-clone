@@ -7,11 +7,11 @@ import CustomSwiper from '../CustomSwiper/CustomSwiper';
 import { Section } from '../Section';
 
 interface MentorSwiperProps {
-  data: MentorCardData[];
+  data: MentorCardData[] | undefined;
   className?: string;
 }
 
-const MentorSwiper: React.FC<MentorSwiperProps> = ({ data, className }) => {
+const MentorSwiper: React.FC<MentorSwiperProps> = ({ data = [], className }) => {
   return (
     <Section title={'Mentor tiêu biểu'}>
       <CustomSwiper className={className} items={data} slideEl={MentorCard} />;

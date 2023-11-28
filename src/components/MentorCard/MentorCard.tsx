@@ -5,7 +5,7 @@ import './style.css';
 import { Card, Typography } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mentor } from '@/src/types';
+import { Mentor } from '@prisma/client';
 
 interface MentorCardCoverProps {
   link: string;
@@ -18,14 +18,14 @@ const MentorCardCover: React.FC<MentorCardCoverProps> = ({
 }) => {
   return (
     <Link href={link}>
-      <div className="course-card__banner">
-        <Image fill src={banner} alt="" />
+      <div className="course-card__banner" style={{ position: 'relative' }}>
+        <Image fill src={banner} alt="mentor" />
       </div>
     </Link>
   );
 };
 
-export type MentorCardData = Partial<Omit<Mentor, 'email'>>;
+export type MentorCardData = Omit<Mentor, 'email'>;
 
 const MentorCard: React.FC<{ data: MentorCardData }> = (props) => {
   const { data } = props;
@@ -34,7 +34,7 @@ const MentorCard: React.FC<{ data: MentorCardData }> = (props) => {
       className="mentor-card"
       style={{ boxShadow: '0 0 8px 0 #bcb8b8', border: '1px solid #c1c1c1' }}
       bodyStyle={{ border: '1px solid #c1c1c1' }}
-      cover={<MentorCardCover banner={undefined && data.avatarUrl} link="#" />}
+      cover={<MentorCardCover banner={undefined && data.image} link="#" />}
     >
       <Card.Meta
         title={
