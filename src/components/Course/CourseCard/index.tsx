@@ -4,8 +4,8 @@ import { FaRegCalendarAlt, FaUser } from 'react-icons/fa';
 import { Avatar, Card, Typography, Flex, Rate, Button } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
-import CourseLevel from './CourseLevel';
 import { Course, Mentor } from '@prisma/client';
+import { CourseLevel } from '..';
 interface CourseCardCoverProps {
   link: string;
   banner?: string;

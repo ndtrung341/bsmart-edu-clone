@@ -2,8 +2,9 @@
 
 import React from 'react';
 import CustomSwiper from '../CustomSwiper/CustomSwiper';
-import { CourseCard, CourseCardData } from '../CourseCard';
+
 import { Section } from '../Section';
+import { CourseCard, CourseCardData } from '../Course';
 
 interface CourseSwiperProps {
   data: CourseCardData[] | undefined;

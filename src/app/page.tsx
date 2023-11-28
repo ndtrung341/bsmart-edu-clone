@@ -10,8 +10,8 @@ import LogoSwiper from '../components/Home/LogoSwiper/LogoSwiper';
 import Banner from '../components/Home/Banner';
 import useSWR from 'swr';
 import axiosClient from '../lib/axiosClient';
-import { CourseCardData } from '../components/CourseCard';
 import { MentorCardData } from '../components/MentorCard/MentorCard';
+import { CourseCardData } from '../components/Course';
 
 const getBestCourses = async (url: string) => {
   const { data } = await axiosClient.get<CourseCardData[]>(url);

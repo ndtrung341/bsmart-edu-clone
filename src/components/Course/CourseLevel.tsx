@@ -15,7 +15,10 @@ const CourseLevel: React.FC<{ level?: Course['courseLevel'] }> = ({ level }) => 
         return '/captoc.webp';
     }
   }, [level]);
-  return <Image src={src} alt={''} width={50} height={50} />;
+
+  return (
+    <Image src={src} alt={''} width={52} height={52} sizes="100vw" style={{ objectFit: 'cover' }} />
+  );
 };
 
 export default CourseLevel;
